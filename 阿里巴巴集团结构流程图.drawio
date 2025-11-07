@@ -47,7 +47,7 @@
         </mxCell>
 
         <!-- 主流程箭头：集团 -> 电商 -->
-        <mxCell id="flow1" value="子公司" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#d6b656;fontSize=12;fontStyle=1;curved=0;" edge="1" parent="1" source="start" target="ecommerce">
+        <mxCell id="flow1" value="子公司" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#d6b656;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="start" target="ecommerce">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="280" y="430" />
@@ -57,7 +57,7 @@
         </mxCell>
 
         <!-- 主流程箭头：集团 -> 蚂蚁 -->
-        <mxCell id="flow2" value="关联公司" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#82b366;fontSize=12;fontStyle=1;curved=0;" edge="1" parent="1" source="start" target="ant-group">
+        <mxCell id="flow2" value="关联公司" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#82b366;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="start" target="ant-group">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="280" y="430" />
@@ -67,7 +67,7 @@
         </mxCell>
 
         <!-- 依赖流程：电商 -> 支付宝 -->
-        <mxCell id="flow3" value="调用支付服务" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#CC0000;fontSize=13;fontStyle=1;dashed=1;dashPattern=8 8;curved=0;" edge="1" parent="1" source="ecommerce" target="alipay">
+        <mxCell id="flow3" value="调用支付服务" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#CC0000;fontSize=13;fontStyle=1;dashed=1;dashPattern=8 8;curved=0;flowAnimation=1;" edge="1" parent="1" source="ecommerce" target="alipay">
           <mxGeometry x="-0.1" relative="1" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
@@ -78,7 +78,7 @@
         </mxCell>
 
         <!-- 流程：蚂蚁 -> 支付宝 -->
-        <mxCell id="flow4" value="核心业务" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#9673a6;fontSize=12;fontStyle=1;curved=0;" edge="1" parent="1" source="ant-group" target="alipay">
+        <mxCell id="flow4" value="核心业务" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#9673a6;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="ant-group" target="alipay">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="560" y="585" />
@@ -88,7 +88,7 @@
         </mxCell>
 
         <!-- 流程：支付宝 -> 蚂蚁数科 -->
-        <mxCell id="flow5" value="技术输出" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#82b366;fontSize=12;fontStyle=1;curved=0;" edge="1" parent="1" source="alipay" target="ant-tech">
+        <mxCell id="flow5" value="技术输出" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#82b366;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="alipay" target="ant-tech">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="850" y="430" />
@@ -98,7 +98,7 @@
         </mxCell>
 
         <!-- 流程：蚂蚁集团 -> 其他业务 -->
-        <mxCell id="flow6" value="业务延伸" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#82b366;fontSize=11;curved=0;" edge="1" parent="1" source="ant-group" target="other-business">
+        <mxCell id="flow6" value="业务延伸" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#82b366;fontSize=11;curved=0;flowAnimation=1;" edge="1" parent="1" source="ant-group" target="other-business">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="560" y="585" />
@@ -108,7 +108,7 @@
         </mxCell>
 
         <!-- 流程：蚂蚁数科 -> 三个产品 -->
-        <mxCell id="flow7" value="区块链应用" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=11;fontStyle=1;curved=0;" edge="1" parent="1" source="ant-tech" target="antchain">
+        <mxCell id="flow7" value="区块链应用" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=11;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="ant-tech" target="antchain">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1120" y="580" />
@@ -117,7 +117,7 @@
           </mxGeometry>
         </mxCell>
 
-        <mxCell id="flow8" value="NFT 平台" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=11;fontStyle=1;curved=0;" edge="1" parent="1" source="ant-tech" target="jingtan">
+        <mxCell id="flow8" value="NFT 平台" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=11;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="ant-tech" target="jingtan">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1120" y="580" />
@@ -126,7 +126,7 @@
           </mxGeometry>
         </mxCell>
 
-        <mxCell id="flow9" value="公链产品" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=11;fontStyle=1;curved=0;" edge="1" parent="1" source="ant-tech" target="jovay">
+        <mxCell id="flow9" value="公链产品" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=11;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="ant-tech" target="jovay">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1120" y="580" />
