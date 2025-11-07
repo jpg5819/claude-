@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net" modified="2025-11-07T00:00:00.000Z" agent="5.0" version="24.0.0">
+  <diagram name="支付流程" id="payment-flow">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 节点定义 -->
+        <!-- 用户节点 -->
+        <mxCell id="user" value="用户&lt;br&gt;（操作APP/工具的人）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F4F8;strokeColor=#2A9D8F;strokeWidth=3;fontSize=14;fontStyle=1;shadow=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="80" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Client节点 -->
+        <mxCell id="client" value="Client&lt;br&gt;（用户使用的应用/AI代理）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F8FB;strokeColor=#3D5A80;strokeWidth=3;fontSize=14;fontStyle=1;shadow=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="240" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Server节点 -->
+        <mxCell id="server" value="Server&lt;br&gt;（提供数据的网站）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#9C27B0;strokeWidth=3;fontSize=14;fontStyle=1;shadow=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Blockchain节点 -->
+        <mxCell id="blockchain" value="Blockchain&lt;br&gt;（处理加密货币支付）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#FF9800;strokeWidth=3;fontSize=14;fontStyle=1;shadow=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="720" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Verifier节点 -->
+        <mxCell id="verifier" value="Verifier/Facilitator&lt;br&gt;（支付校验方）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#4CAF50;strokeWidth=3;fontSize=14;fontStyle=1;shadow=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="720" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 流程连接线（所有线条都带流动动画） -->
+
+        <!-- 用户 -> Client -->
+        <mxCell id="flow1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#2A9D8F;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="user" target="client">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Client -> Server: 1. 发起资源请求 -->
+        <mxCell id="flow2" value="1. 发起资源请求&lt;br&gt;（如：GET /weather）" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#3D5A80;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="client" target="server">
+          <mxGeometry x="0.1" relative="1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+            <Array as="points">
+              <mxPoint x="500" y="280" />
+              <mxPoint x="500" y="400" />
+              <mxPoint x="300" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Server -> Client: 2. 返回HTTP 402 -->
+        <mxCell id="flow3" value="2. 返回HTTP 402&lt;br&gt;（要求支付，如0.01 USDC）" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#9C27B0;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="server" target="client">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint x="10" y="10" as="offset" />
+            <Array as="points">
+              <mxPoint x="150" y="520" />
+              <mxPoint x="150" y="380" />
+              <mxPoint x="700" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Client -> Blockchain: 3. 发起支付 -->
+        <mxCell id="flow4" value="3. 发起支付&lt;br&gt;（携带支付数据的请求头）" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#3D5A80;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="client" target="blockchain">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-10" y="-10" as="offset" />
+            <Array as="points">
+              <mxPoint x="700" y="400" />
+              <mxPoint x="700" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Blockchain -> Verifier: 4. 验证支付 -->
+        <mxCell id="flow5" value="4. 验证支付" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#FF9800;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="blockchain" target="verifier">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Verifier -> Client: 支付成功确认 -->
+        <mxCell id="flow6" value="支付成功确认" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#4CAF50;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="verifier" target="client">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="600" />
+              <mxPoint x="850" y="600" />
+              <mxPoint x="850" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Client -> Server: 5. 再次请求资源 -->
+        <mxCell id="flow7" value="5. 再次请求资源&lt;br&gt;（携带支付凭证）" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#3D5A80;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="client" target="server">
+          <mxGeometry x="0.1" relative="1" as="geometry">
+            <mxPoint x="10" y="-30" as="offset" />
+            <Array as="points">
+              <mxPoint x="550" y="280" />
+              <mxPoint x="550" y="440" />
+              <mxPoint x="300" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Server -> Client: 6. 返回资源 -->
+        <mxCell id="flow8" value="6. 返回资源" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#9C27B0;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="server" target="client">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint x="10" y="30" as="offset" />
+            <Array as="points">
+              <mxPoint x="100" y="520" />
+              <mxPoint x="100" y="340" />
+              <mxPoint x="700" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Client -> User: 将资源展示给用户 -->
+        <mxCell id="flow9" value="将资源展示给用户" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#2A9D8F;fontSize=12;fontStyle=1;curved=0;flowAnimation=1;" edge="1" parent="1" source="client" target="user">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="280" />
+              <mxPoint x="900" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 标注说明 -->
+        <mxCell id="legend" value="流程说明：&lt;br&gt;━━ 主要流程&lt;br&gt;╍╍ 二次请求&lt;br&gt;→  所有线条均带流动动画" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="80" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- 流程步骤说明 -->
+        <mxCell id="steps" value="&lt;b&gt;支付验证流程&lt;/b&gt;&lt;br&gt;&lt;br&gt;1. Client向Server请求资源&lt;br&gt;2. Server要求支付（HTTP 402）&lt;br&gt;3. Client发起区块链支付&lt;br&gt;4. Blockchain通知Verifier验证&lt;br&gt;5. Verifier确认支付成功&lt;br&gt;6. Client携带凭证再次请求&lt;br&gt;7. Server返回资源&lt;br&gt;8. 用户获得资源" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#333333;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="240" width="300" height="200" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
