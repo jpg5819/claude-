@@ -27,6 +27,7 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
+            margin-bottom: 40px;
         }
 
         .header {
@@ -148,74 +149,11 @@
         .tier-4 { background: #667eea; color: white; }
         .tier-5 { background: #9ca3af; color: white; }
 
-        .progress-bar {
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 5px;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s;
-        }
-
-        .address {
-            font-family: 'Courier New', monospace;
-            font-size: 0.85em;
-            color: #667eea;
-            background: #f3f4f6;
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
-
         .highlight {
             background: #fef3c7;
             padding: 2px 6px;
             border-radius: 3px;
             font-weight: 600;
-        }
-
-        .insight-box {
-            background: #f0fdf4;
-            border-left: 4px solid #10b981;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-
-        .insight-box h3 {
-            color: #059669;
-            margin-bottom: 10px;
-        }
-
-        .insight-box ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .insight-box li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .insight-box li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .footer {
-            background: #f8f9fa;
-            padding: 30px;
-            text-align: center;
-            color: #666;
-            border-top: 1px solid #e5e7eb;
         }
 
         @media (max-width: 768px) {
@@ -243,10 +181,6 @@
         .number {
             font-weight: 600;
             color: #667eea;
-        }
-
-        .text-center {
-            text-align: center;
         }
 
         .text-right {
@@ -352,151 +286,6 @@
                     </tbody>
                 </table>
             </div>
-
-            <!-- Top 10 Addresses -->
-            <div class="section">
-                <h2 class="section-title">🏆 前10大空投地址</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="text-center">排名</th>
-                            <th>地址</th>
-                            <th class="text-right">空投数量</th>
-                            <th class="text-right">占总空投</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-center">🥇</td>
-                            <td><span class="address">0xfE25BBE82c87Fab5D8283799B3627b98543D29CF</span></td>
-                            <td class="text-right number">12,197,000</td>
-                            <td class="text-right">0.366%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">🥈</td>
-                            <td><span class="address">0xF18D6e80DdcdBb3280FeC668b5A77d89e8e93869</span></td>
-                            <td class="text-right number">10,000,000</td>
-                            <td class="text-right">0.300%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">🥉</td>
-                            <td><span class="address">0x5e2c902bbbD4E3f743940d14b36706a9Bae7E0b4</span></td>
-                            <td class="text-right number">7,582,500</td>
-                            <td class="text-right">0.228%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">4</td>
-                            <td><span class="address">0x0cD19595Bbf6c4B14EBcA681F63525De2f127Fe2</span></td>
-                            <td class="text-right number">7,212,000</td>
-                            <td class="text-right">0.217%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">5</td>
-                            <td><span class="address">0x927b70b795979b9c1Bb55f19487e516Cc07C5167</span></td>
-                            <td class="text-right number">7,205,946</td>
-                            <td class="text-right">0.216%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">6</td>
-                            <td><span class="address">0x28Db4CE3f48DcD00E7695Ee19a45d7D1715d7330</span></td>
-                            <td class="text-right number">7,202,500</td>
-                            <td class="text-right">0.216%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">7</td>
-                            <td><span class="address">0xbd223c8f2ccDE147162F1744429d8e055Ec6E984</span></td>
-                            <td class="text-right number">6,923,982</td>
-                            <td class="text-right">0.208%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">8</td>
-                            <td><span class="address">0x0dCd72aB5dC9e946DA5E4a6Fdb5e9D6c4E019859</span></td>
-                            <td class="text-right number">6,814,500</td>
-                            <td class="text-right">0.205%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">9</td>
-                            <td><span class="address">0x9DF8Cb1300C796FF811AF2A89191866505C4CaE2</span></td>
-                            <td class="text-right number">6,812,000</td>
-                            <td class="text-right">0.205%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">10</td>
-                            <td><span class="address">0x2f1430D99c5d6f74970CdAcbD21d24C840B98C73</span></td>
-                            <td class="text-right number">6,800,000</td>
-                            <td class="text-right">0.204%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Whale Concentration -->
-            <div class="section">
-                <h2 class="section-title">🐋 大户集中度分析</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>层级</th>
-                            <th class="text-right">地址数量</th>
-                            <th class="text-right">总空投量</th>
-                            <th class="text-right">占总空投</th>
-                            <th class="text-right">人均空投</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>前 10 名</td>
-                            <td class="text-right">10</td>
-                            <td class="text-right number">78,750,428</td>
-                            <td class="text-right">2.36%</td>
-                            <td class="text-right number">7,875,042</td>
-                        </tr>
-                        <tr>
-                            <td>前 50 名</td>
-                            <td class="text-right">50</td>
-                            <td class="text-right number">293,594,933</td>
-                            <td class="text-right">8.82%</td>
-                            <td class="text-right number">5,871,898</td>
-                        </tr>
-                        <tr>
-                            <td>前 100 名</td>
-                            <td class="text-right">100</td>
-                            <td class="text-right number">485,981,249</td>
-                            <td class="text-right">14.59%</td>
-                            <td class="text-right number">4,859,812</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Key Insights -->
-            <div class="section">
-                <h2 class="section-title">💡 关键洞察</h2>
-                <div class="insight-box">
-                    <h3>分配特点</h3>
-                    <ul>
-                        <li>47.2% 的用户（35,878人）获得 5K-20K 代币，构成主力群体</li>
-                        <li>仅 5.8% 的大户获得了 61.9% 的总空投，体现对核心贡献者的激励</li>
-                        <li>第1名空投量（1,219.7万）是平均值（4.38万）的 278倍</li>
-                        <li>前100名（0.13%的地址）获得 14.59% 的空投，集中度适中</li>
-                    </ul>
-                </div>
-                <div class="insight-box">
-                    <h3>生态价值</h3>
-                    <ul>
-                        <li>76,021 个地址展示了广泛的社区参与度</li>
-                        <li>5个层级的设计体现了对不同贡献度用户的差异化激励</li>
-                        <li>78%的普通用户获得了基础空投，体现普惠性</li>
-                        <li>总空投33.3亿代币，显示了项目对社区的重视</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>数据来源: <a href="https://github.com/monad-crypto/airdrop-addresses" target="_blank" style="color: #667eea;">github.com/monad-crypto/airdrop-addresses</a></p>
-            <p>分析时间: 2025-11-10 | 总记录数: 76,021 条</p>
         </div>
     </div>
 </body>
