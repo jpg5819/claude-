@@ -2,7 +2,14 @@
   "mcpServers": {
     "hive-intelligence": {
       "url": "https://hiveintelligence.xyz/mcp",
-      "transport": "sse"
+      "transport": "sse",
+      "description": "Hive Intelligence - 加密货币链上数据分析服务",
+      "capabilities": [
+        "链上数据查询",
+        "交易所流入流出分析",
+        "市场数据获取",
+        "技术指标计算"
+      ]
     }
   }
 }
