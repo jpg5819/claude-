@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hive-intelligence": {
+      "url": "https://hiveintelligence.xyz/mcp",
+      "transport": "sse"
+    }
+  }
+}
